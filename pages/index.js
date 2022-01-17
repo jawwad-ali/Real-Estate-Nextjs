@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import { Flex, Box } from "@chakra-ui/react"
 import { baseURL, fetchApi } from "../utils/fetchApi";
+import Property from "../components/Property";
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
   console.log(propertiesForSale, propertiesForRent)
@@ -16,10 +17,10 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
       />
-      <Flex FlexWrap="wrap">
 
+      <Flex flexWrap="wrap">
+        {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
       </Flex>
-
 
       <Banner
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
@@ -31,10 +32,11 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
       />
-      <Flex FlexWrap="wrap">
+      <Flex flexWrap="wrap" >
+        {propertiesForRent.map((property) => <Property property={property} key={property.id} />)}
+      </Flex >
 
-      </Flex>
-    </Box>
+    </Box >
   )
 }
 
@@ -50,4 +52,4 @@ export async function getStaticProps() {
   }
 }
 
-// 31.27
+// 57.22
