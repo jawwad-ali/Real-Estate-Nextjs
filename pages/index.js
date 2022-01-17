@@ -4,7 +4,6 @@ import { baseURL, fetchApi } from "../utils/fetchApi";
 import Property from "../components/Property";
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
-  console.log(propertiesForSale, propertiesForRent)
   return (
     <Box>
       <Banner
@@ -36,7 +35,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         {propertiesForRent.map((property) => <Property property={property} key={property.id} />)}
       </Flex >
 
-    </Box >
+    </Box>
   )
 }
 
@@ -52,4 +51,4 @@ export async function getStaticProps() {
   }
 }
 
-// 57.22
+// 1.0.15
