@@ -19,13 +19,13 @@ const Navbar = () => {
                             <MenuItem icon={<FcHome />}>Home</MenuItem>
                         </Link>
                         <Link href="/search" passHref>
-                            <MenuItem icon={<BsSearch />}>Home</MenuItem>
+                            <MenuItem icon={<BsSearch />}>Search</MenuItem>
                         </Link>
                         <Link href="/search?purpose=for-rent" passHref>
-                            <MenuItem icon={<FcAbout />}>Home</MenuItem>
+                            <MenuItem icon={<FcAbout />}>For Rent</MenuItem>
                         </Link>
-                        <Link href="/search?purpose=for-rent" passHref>
-                            <MenuItem icon={<FiKey />}>Home</MenuItem>
+                        <Link href="/search?purpose=for-sale" passHref>
+                            <MenuItem icon={<FiKey />}>For Sale</MenuItem>
                         </Link>
                     </MenuList>
                 </Menu>
