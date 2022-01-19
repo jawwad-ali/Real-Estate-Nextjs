@@ -5,14 +5,14 @@ import Property from "../components/Property";
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
   return (
-    <Box> 
-      <Banner 
+    <Box>
+      <Banner
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
         purpose="RENT A HOME"
-        title1="Rental Homes for" 
+        title1="Rental Homes for"
         title2="Everyone"
         desc1="Explore Apartments, Villas, Homes"
-        desc2="and more" 
+        desc2="and more"
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
       />
@@ -35,7 +35,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         {propertiesForRent.map((property) => <Property property={property} key={property.id} />)}
       </Flex>
 
-    </Box>   
+    </Box>
   )
 }
 
@@ -51,4 +51,4 @@ export async function getStaticProps() {
   }
 }
 
-// 1.23.03
+// 1.58.50

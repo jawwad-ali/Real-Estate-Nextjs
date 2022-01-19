@@ -24,7 +24,7 @@ const Search = ({ properties }) => {
                 fontSize="lg"
                 justifyContent="center"
                 alignItems="center"
-                onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
+                onClick={() => setSearchFilters((prevFilters) => !prevFilters)}  
             >
                 <Text>Search Property by Filters</Text>
                 <Icon paddingLeft="2" w="7" as={BsFilter} />
